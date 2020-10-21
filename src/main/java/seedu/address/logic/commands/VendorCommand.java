@@ -47,6 +47,7 @@ public class VendorCommand extends Command {
         model.setVendorIndex(index);
 
         if (oldIndex != index) {
+            // TODO: Assign new orderManager (otherwise undo will get back previous order)
             model.clearOrder();
         }
 
