@@ -19,6 +19,7 @@ public class SubmitCommandTest {
         ObservableList<Food> menu = model.getFilteredFoodList();
 
         StringBuilder expectedMessage = new StringBuilder();
+        expectedMessage.append(SubmitCommand.MESSAGE_ORDER_COPIED_TO_CLIPBOARD + '\n');
         double calculatedTotal = 0;
         for (int i = 0; i < 5; i++) {
             OrderItem orderItem = new OrderItem(menu.get(i), i + 6);
